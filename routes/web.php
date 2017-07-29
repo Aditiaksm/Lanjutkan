@@ -86,3 +86,22 @@ Route::get('empat',function(){
 Route::get('cektampilan',function(){
 	return view('layouts.master');
 });
+
+route::get('/orangtua',function(){
+	$ortu = App\Orangtua::all();
+	foreach ($ortu as $key) {
+		echo $key->namaayah;
+		echo " dengan ";
+		echo $key->namaibu;
+		echo " mempunyai anak ";
+		foreach ($key->siswa as $data) {
+			echo "<li>".$data->nama."</li>";
+		}
+			echo "<hr>";
+	}
+});
+
+route::get('/coba','MyController@index');
+route::get('/cobain','MyController@tampilmodel');
+route::get('/cobaae','MyController@tampilview');
+route::get('/ngehe','MyController@percobaan');
