@@ -29,6 +29,4 @@ class MyController extends Controller
     	$ortu=Orangtua::all();
     	return view('index',compact('ortu'));
     }
-
-    
 }
