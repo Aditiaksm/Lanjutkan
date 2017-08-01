@@ -13,6 +13,6 @@ class Siswa extends Model
 
     public function orangtua()
     {
-    	return $this->belongsTo('App\Orangtua','orangtua_id');
+    	return $this->belongsTo('App\Orangtua','orangtuaid');
     }
 }
